@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "name": "petgram-app-yitodeveloper",
+  "builds": [
+    {
+      "use": "@now/static-build",
+      "src": "package.json"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*).json",
+      "dest": "/$1.json"
+    },
+    {
+      "src": "(.*).js",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
